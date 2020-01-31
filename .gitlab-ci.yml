@@ -1,4 +1,4 @@
-image: nikolaik/python3.7-nodejs12
+image: nikolaik/python-nodejs:python3.7-nodejs12
 
 cache:
   paths:
