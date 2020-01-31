@@ -9,7 +9,7 @@ deploy-stg:
   script:
     - cd imgscoring-svc
     - python -m venv venv
-    - venv/bin/activate
+    - source venv/bin/activate
     - npm install
     - npx serverless package -s stg
     - npx serverless deploy -s stg
