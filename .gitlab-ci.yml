@@ -6,8 +6,8 @@ deploy-stg:
     - npm -g install serverless serverless-python-requirements serverless-wsgi
   script:
     - cd imgscoring-svc
-    - #python -m venv
-    - #venv/bin/activate
+    # - python -m venv
+    # - venv/bin/activate
     - serverless deploy -s stg
   only:
     - stg
