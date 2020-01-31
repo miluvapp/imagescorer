@@ -1,0 +1,11 @@
+image: node:12
+
+deploy-stg:
+  stage: deploy
+  script:
+    - cd imgscoring-svc
+    - python -m venv
+    - venv/bin/activate
+    - npx serverless deploy -s stg
+  only:
+    - stg
