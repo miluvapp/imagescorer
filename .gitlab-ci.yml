@@ -2,10 +2,12 @@ image: node:12
 
 deploy-stg:
   stage: deploy
+  before_script:
+    - npm -g install serverless serverless-python-requirements serverless-wsgi
   script:
     - cd imgscoring-svc
-    - python -m venv
-    - venv/bin/activate
-    - npx serverless deploy -s stg
+    - #python -m venv
+    - #venv/bin/activate
+    - serverless deploy -s stg
   only:
     - stg
