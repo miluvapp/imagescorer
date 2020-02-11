@@ -20,4 +20,17 @@ cd Kerja\Face Detection\Code\imgscoring-svc
     npm init 
     npm install serverless-<package must install>
 
-    
+## docker 
+
+### build 
+    docker build -t imgscoring-svc .
+### run 
+    docker run --name imgscoring-svc -p 80:80 imgscoring-svc
+### logs 
+    docker logs -f imgscoring-svc
+### stop (turn off server)
+    docker stop imgscoring-svc
+### rm 
+    docker rm imgscoring-svc
+
+
