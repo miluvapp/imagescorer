@@ -45,6 +45,6 @@ cd Kerja\Face Detection\Code\imgscoring-svc
 
     docker ps
 
-### 
+### push
 
-    docker container 
+    docker push heartenly/imagescorer
