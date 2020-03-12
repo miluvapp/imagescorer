@@ -40,3 +40,11 @@ cd Kerja\Face Detection\Code\imgscoring-svc
 ### rm 
 
     docker rm imgscoring-svc
+
+### ps
+
+    docker ps
+
+### 
+
+    docker container 

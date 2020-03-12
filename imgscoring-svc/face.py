@@ -23,7 +23,8 @@ class FaceDetector(object):
 def face_det(image: np.ndarray) -> np.ndarray:
     detector = FaceDetector("haarcascade_frontalface_default.xml")
     faces_coord = detector.detect(image, True)
-    if (faces_coord):
-        return faces_coord
-    else :
-        return np.empty([0])
+    return np.array(faces_coord)
+    # if faces_coord is None:
+    #     return np.empty([0])
+    # else:
+    #     return faces_coord

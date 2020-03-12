@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/imageScoring/score", methods=["POST"])
 def imagescoring_score():
 	# input
-	file = request.files['yoyo']
+	file = request.files['file']
 	print('Posted file: %s' % (file))
 	buf = file.read()
 	#use numpy to construct an array from the bytes
