@@ -5,6 +5,9 @@ cache:
   paths:
     - node_modules/
 
+before_script:
+  - docker info
+
 build-stg: 
   stage: build
   script: 
