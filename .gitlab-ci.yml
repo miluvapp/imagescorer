@@ -1,17 +1,26 @@
-image: nikolaik/python-nodejs:python3.7-nodejs12
+# image: nikolaik/python-nodejs:python3.7-nodejs12
+image: docker
 
 cache:
   paths:
     - node_modules/
 
-deploy-stg:
-  stage: deploy
-  script:
+build-stg: 
+  stage: build
+  script: 
     - cd imgscoring-svc
-    - python -m venv venv
-    - source venv/bin/activate
-    - npm install
-    - npx serverless package -s stg
-    - npx serverless deploy -s stg
+    - docker build -t imgscoring-svc .
   only:
     - stg
+
+# deploy-stg:
+#   stage: deploy
+#   script:
+#     - cd imgscoring-svc
+#     - python -m venv venv
+#     - source venv/bin/activate
+#     - npm install
+#     - npx serverless package -s stg
+#     - npx serverless deploy -s stg
+#   only:
+#     - stg
