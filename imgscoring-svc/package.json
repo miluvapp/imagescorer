@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "serverless": "^1.62.0",
+    "serverless": "^3.25.1",
     "serverless-python-requirements": "^5.0.1",
     "serverless-wsgi": "^1.7.4"
   }
